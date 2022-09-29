@@ -7,4 +7,8 @@ export default defineNuxtConfig({
     MyModule
   ],
   siteMap: sitemapConfig
+  // modules: ['~/modules/sitemap'],
+  // sitemap: {
+  //   hostname: 'https://127.0.0.1'
+  // }
 })

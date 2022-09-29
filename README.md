@@ -22,13 +22,26 @@ yarn add nuxt-sitemap-plus -D
 pnpm add nuxt-sitemap-plus -D
 ```
 ## Usage
-
-```typescript
-// nuxt.config.ts
-import { defineNuxtConfig } from 'nuxt'
-
+2.Add a custom configuration with the sitemap property:
+```js
+// nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['nuxt-sitemap-plus']
+  modules: [
+    '@nuxtjs/sitemap'
+  ],
+  siteMap: {
+    // options
+  },
 })
 ```
-## Configuration
+2.build your nuxt app and see your sitemap file
+```bash
+npm run build
+```
+```bash
+npx nuxi preview
+```
+
+In your browser go to `http://localhost:3000/sitemap.xml`
+### Example
+Please see playground
