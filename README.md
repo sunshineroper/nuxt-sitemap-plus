@@ -1,9 +1,9 @@
 # `nuxt-sitemap-plus`
 sitemap generation for nuxt3
 
-![npm version](https://img.shields.io/npm/v/nuxtjs-sitemap-plus)
-![license](https://img.shields.io/npm/l/nuxtjs-sitemap-plus)
-
+![npm version](https://img.shields.io/npm/v/nuxt-sitemap-plus)
+![license](https://img.shields.io/npm/l/nuxt-sitemap-plus)
+![downloads](https://img.shields.io/npm/dw/nuxt-sitemap-plus)
 ## Install
 
 ### Using `npm`
@@ -25,9 +25,10 @@ pnpm add nuxt-sitemap-plus -D
 2.Add a custom configuration with the sitemap property:
 ```js
 // nuxt.config.js
+import sitemapPlus from 'nuxt-sitemap-plus'
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/sitemap'
+    sitemapPlus
   ],
   siteMap: {
     // options
