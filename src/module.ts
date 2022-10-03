@@ -16,8 +16,8 @@ export default defineNuxtModule<ModuleOptions>({
     //   nuxt: '>=3.0.0'
     // }
   },
-  setup (moduleOptions, nuxt) {
-    const options = initOptions(nuxt, moduleOptions)
+  async setup (moduleOptions, nuxt) {
+    const options = await initOptions(nuxt, moduleOptions)
     const xmlFilePath = path.join(nuxt.options.srcDir, `node_modules/.cache/.sitemap/${options.path}`)
     if (!options) {
       return
@@ -35,10 +35,18 @@ export default defineNuxtModule<ModuleOptions>({
   }
 })
 
-function initOptions (instance, moduleOptions) {
+async function initOptions (instance, moduleOptions) {
   if (instance.options.siteMap === false || moduleOptions === false) {
     return false
   }
-  const options = instance.options.siteMap || moduleOptions
+  let options = instance.options.siteMap || moduleOptions
+
+  if (options === 'function') {
+    options = await options.call(instance)
+  }
+
+  if (options === false) {
+    return false
+  }
   return options
 }

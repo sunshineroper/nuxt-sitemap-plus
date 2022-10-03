@@ -1,6 +1,5 @@
 import { Readable } from 'stream'
 import { siteMapOptions } from './options'
-import { createResolver } from '@nuxt/kit'
 const { createWriteStream, mkdirSync, writeFileSync } = require('fs')
 const path = require('path')
 const { SitemapStream, streamToPromise } = require('sitemap')
