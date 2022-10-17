@@ -29,7 +29,7 @@ export default defineNuxtModule<ModuleOptions>({
     // Init static routes
     nuxt.hook('pages:extend', async (routes) => {
       const routerlist = getStaticRoutes(routes)
-      await generateSiteMapXML(nuxt, routerlist, options)
+      await generateSiteMapXML(nuxt, routes.concat(options.routes), options)
     })
   },
 })
