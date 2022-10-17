@@ -8,18 +8,18 @@ sitemap generation for nuxt3
 
 ### Using `npm`
 ```sh
-npm i nuxt-sitemap-plus -D
+npm i nuxt-sitemap-plus
 ```
 ### Using `yarn`
 
 ```sh
-yarn add nuxt-sitemap-plus -D
+yarn add nuxt-sitemap-plus
 ```
 
 ### Using `pnpm`
 
 ```sh
-pnpm add nuxt-sitemap-plus -D
+pnpm add nuxt-sitemap-plus
 ```
 ## Usage
 2.Add a custom configuration with the sitemap property:
